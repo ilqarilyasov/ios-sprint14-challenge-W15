@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import RandomQuotesCore
 
 class RandomQuotesViewController: UIViewController {
+    
+    // MARK: - Properties
 
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
     let quoteController = QuoteController()
+    
+    // MARK: - Lifecycle Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,24 +8,26 @@
 
 import Foundation
 
-struct Quote: Codable {
+public struct Quote: Codable {
     
-    let quote: String
-    let author: String
+    // MARK: - Properties
     
-    init(quote: String, author: String) {
+    public let quote: String
+    public let author: String
+    
+    public init(quote: String, author: String) {
         self.quote = quote
         self.author = author
     }
     
-    // Decodable
+    // MARK: - Decodable
     
     enum QuoteCodingKeys: String, CodingKey {
         case quote
         case author
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         
         let jsonContainer = try decoder.container(keyedBy: QuoteCodingKeys.self)
         let quote = try jsonContainer.decode(String.self, forKey: .quote)

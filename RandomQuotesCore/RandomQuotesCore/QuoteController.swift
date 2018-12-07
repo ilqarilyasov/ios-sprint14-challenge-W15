@@ -8,15 +8,22 @@
 
 import Foundation
 
-class QuoteController {
+public class QuoteController {
     
-    var quotes = [Quote]()
+    // MARK: - Properties
+    
+    public var quotes = [Quote]()
     
     private let baseURL = URL(string: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous&count=1")!
     private let apiKey = "6rV8lFNtYomshU3DQuPFQ1tDYkaEp1Ja5ZFjsn3RJG1ROArk3n"
     
+    // MARK: - Initializer
     
-    func fetchQuotes(completion: @escaping (Error?) -> Void ) {
+    public init() {}
+    
+    // MARK: - URL Session
+    
+    public func fetchQuotes(completion: @escaping (Error?) -> Void ) {
         
         var request = URLRequest(url: baseURL)
         request.addValue(apiKey, forHTTPHeaderField: "X-Mashape-Key")
