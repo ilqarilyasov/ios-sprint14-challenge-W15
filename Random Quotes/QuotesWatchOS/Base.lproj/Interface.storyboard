@@ -16,11 +16,11 @@
                     <items>
                         <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="DX2-fr-fVa">
                             <items>
-                                <label width="1" height="0.80000000000000004" alignment="left" text="Label" textAlignment="left" minimumScaleFactor="0.69999999999999996" id="tjO-YP-VUW">
+                                <label width="1" height="0.80000000000000004" alignment="left" text="loading ..." textAlignment="left" numberOfLines="0" minimumScaleFactor="0.69999999999999996" id="tjO-YP-VUW">
                                     <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                 </label>
-                                <label width="1" alignment="right" verticalAlignment="bottom" text="Label" textAlignment="right" minimumScaleFactor="0.5" id="ZMB-b5-PNU">
-                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                <label width="1" alignment="right" verticalAlignment="bottom" text="..." textAlignment="right" minimumScaleFactor="0.5" id="ZMB-b5-PNU">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                 </label>
                             </items>
                         </group>
