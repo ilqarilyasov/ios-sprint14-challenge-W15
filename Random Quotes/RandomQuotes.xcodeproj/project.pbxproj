@@ -25,6 +25,8 @@
 		82568F2C21BAE4A100296107 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82568F2B21BAE4A100296107 /* ExtensionDelegate.swift */; };
 		82568F2E21BAE4A200296107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82568F2D21BAE4A200296107 /* Assets.xcassets */; };
 		82568F3221BAE4A200296107 /* QuotesWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 82568F1821BAE4A000296107 /* QuotesWatchOS.app */; };
+		82568F5621BAE7D900296107 /* RandomQuotesCoreWatchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82568F5521BAE7D900296107 /* RandomQuotesCoreWatchOS.framework */; };
+		82568F5721BAE7D900296107 /* RandomQuotesCoreWatchOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82568F5521BAE7D900296107 /* RandomQuotesCoreWatchOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 82568F1721BAE4A000296107;
 			remoteInfo = QuotesWatchOS;
+		};
+		82568F5421BAE7D900296107 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82568E9B21BAD9BE00296107 /* RandomQuotesCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82568F4921BAE76600296107;
+			remoteInfo = RandomQuotesCoreWatchOS;
+		};
+		82568F5821BAE7D900296107 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82568E9B21BAD9BE00296107 /* RandomQuotesCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 82568F4821BAE76600296107;
+			remoteInfo = RandomQuotesCoreWatchOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -108,6 +124,17 @@
 				82568F2521BAE4A100296107 /* QuotesWatchOS Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82568F5A21BAE7D900296107 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				82568F5721BAE7D900296107 /* RandomQuotesCoreWatchOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -159,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82568F5621BAE7D900296107 /* RandomQuotesCoreWatchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				82568EA021BAD9BE00296107 /* RandomQuotesCore.framework */,
+				82568F5521BAE7D900296107 /* RandomQuotesCoreWatchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -341,10 +370,12 @@
 				82568F2021BAE4A100296107 /* Sources */,
 				82568F2121BAE4A100296107 /* Frameworks */,
 				82568F2221BAE4A100296107 /* Resources */,
+				82568F5A21BAE7D900296107 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				82568F5921BAE7D900296107 /* PBXTargetDependency */,
 			);
 			name = "QuotesWatchOS Extension";
 			productName = "QuotesWatchOS Extension";
@@ -413,6 +444,13 @@
 			fileType = wrapper.framework;
 			path = RandomQuotesCore.framework;
 			remoteRef = 82568E9F21BAD9BE00296107 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		82568F5521BAE7D900296107 /* RandomQuotesCoreWatchOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RandomQuotesCoreWatchOS.framework;
+			remoteRef = 82568F5421BAE7D900296107 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -504,6 +542,11 @@
 			isa = PBXTargetDependency;
 			target = 82568F1721BAE4A000296107 /* QuotesWatchOS */;
 			targetProxy = 82568F3021BAE4A200296107 /* PBXContainerItemProxy */;
+		};
+		82568F5921BAE7D900296107 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RandomQuotesCoreWatchOS;
+			targetProxy = 82568F5821BAE7D900296107 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

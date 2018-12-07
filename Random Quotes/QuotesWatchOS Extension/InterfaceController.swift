@@ -8,24 +8,31 @@
 
 import WatchKit
 import Foundation
+import RandomQuotesCoreWatchOS
 
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var quoteLabel: WKInterfaceLabel!
+    @IBOutlet weak var authorLabel: WKInterfaceLabel!
+    
+    let quotesController = QuoteController()
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        quotesController.fetchQuotes { (error) in
+            if let error = error {
+                NSLog("Error fetching quotes: \(error)")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.quoteLabel.setText(self.quotesController.quotes[0].quote)
+                self.authorLabel.setText(self.quotesController.quotes[0].author)
+            }
+        }
     }
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
 
 }

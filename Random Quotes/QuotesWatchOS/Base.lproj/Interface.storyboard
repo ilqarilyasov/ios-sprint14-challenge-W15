@@ -25,6 +25,10 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="authorLabel" destination="ZMB-b5-PNU" id="jY4-2c-i99"/>
+                        <outlet property="quoteLabel" destination="tjO-YP-VUW" id="bgR-2G-g9t"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>
